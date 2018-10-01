@@ -1,6 +1,30 @@
 #include "glmc.h"
 #include<stdio>
 #include<math.h>
+void glmc_mat3f_from_4f(mat3f dest, mat4f src)
+{	
+	dest[0][0] = src[0][0];
+	dest[0][1] = src[0][1];
+	dest[0][2] = src[0][2];
+	dest[1][0] = src[1][0];
+	dest[1][1] = src[1][1];
+	dest[1][2] = src[1][2];
+	dest[2][0] = src[2][0];
+	dest[2][1] = src[2][1];
+	dest[2][2] = src[2][2];
+}
+void glmc_mat3f_copy(mat3f dest, mat3f src)
+{	
+	dest[0][0] = src[0][0];
+	dest[0][1] = src[0][1];
+	dest[0][2] = src[0][2];
+	dest[1][0] = src[1][0];
+	dest[1][1] = src[1][1];
+	dest[1][2] = src[1][2];
+	dest[2][0] = src[2][0];
+	dest[2][1] = src[2][1];
+	dest[2][2] = src[2][2];	
+}
 void glmc_mat3f_add(mat3f dest, mat3f src_a, mat3f src_b)
 {
 	dest[0][0] = src_a[0][0] + src_b[0][0];
