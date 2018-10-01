@@ -1,6 +1,29 @@
 #include "glmc.h"
 #include<stdio.h>
 #include<math.h>
+void glmc_mat2f_from_3f(mat2f dest, mat3f src)
+{	
+	dest[0][0] = src[0][0];
+	dest[0][1] = src[0][1];
+	dest[1][0] = src[1][0];
+	dest[1][1] = src[1][1];
+	
+}
+void glmc_mat2f_from_4f(mat2f dest, mat4f src)
+{	
+	dest[0][0] = src[0][0];
+	dest[0][1] = src[0][1];
+	dest[1][0] = src[1][0];
+	dest[1][1] = src[1][1];	
+}
+
+void glmc_mat2f_copy(mat2f dest, mat2f src)
+{
+	dest[0][0] = src[0][0];
+	dest[0][1] = src[0][1];
+	dest[1][0] = src[1][0];
+	dest[1][1] = src[1][1];	
+}
 void glmc_mat2f_add(mat2f dest, mat2f src_a, mat2f src_b)
 {
 	dest[0][0] = src_a[0][0] + src_b[0][0];
@@ -131,4 +154,11 @@ void glmc_mat2f_normlize(mat2f dest, mat2f src)
 void glmc_mat2f_normlize_dest(mat2f dest)
 {
 	glmc_mat2f_normlize(dest, dest);
+}
+void glmc_mat2f_scale(mat2f dest, float src_a)
+{
+	dest[0][0] = src_a;
+	dest[0][1] = 0;
+	dest[1][0] = 0;
+	dest[1][1] = 1;
 }
