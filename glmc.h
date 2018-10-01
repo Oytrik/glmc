@@ -146,6 +146,11 @@ float glmc_vec2f_dot(vec2f src_a, vec2f src_b);
 
 //mat2
 
+void glmc_mat2f_from_3f(mat2f dest, mat3f src);
+void glmc_mat2f_from_4f(mat2f dest, mat4f src);
+
+void glmc_mat2f_copy(mat2f dest, mat2f src);
+
 void glmc_mat2f_add(mat2f dest, mat2f src_a, mat2f src_b);
 void glmc_mat2f_add_dest(mat2f dest, mat2f src_b);
 
@@ -171,5 +176,87 @@ void glmc_mat2f_normlize_dest(mat2f dest);
 
 void glmc_mat2f_transpose(mat2f dest, mat2f src);
 void glmc_mat2f_transpose_dest(mat2f dest);
+void glmc_mat2f_scale(mat2f dest, float src_a);
+
+//mat3
+
+void glmc_mat3f_from_4f(mat3f dest, mat4f src);
+
+void glmc_mat3f_copy(mat3f dest, mat3f src);
+
+void glmc_mat3f_add(mat3f dest, mat3f src_a, mat3f src_b);
+void glmc_mat3f_add_dest(mat3f dest, mat3f src_b);
+
+void glmc_mat3f_sub(mat3f dest, mat3f src_a, mat3f src_b);
+void glmc_mat3f_sub_dest(mat3f dest, mat3f src_b);
+
+void glmc_mat3f_mul(mat3f dest, mat3f src_a, mat3f src_b);
+void glmc_mat3f_mul_dest(mat3f dest, mat3f src_b);
+void glmc_mat3f_mul_s(mat3f dest, mat3f src_a, float src_b);
+
+float glmc_mat3f_determinant(mat3f dest);
+void glmc_mat3f_inverse(mat3f dest, mat3f src);
+
+void glmc_mat3f_div(mat3f dest, mat3f src_a, mat3f src_b);
+void glmc_mat3f_div_dest(mat3f dest, mat3f src_b);
+void glmc_mat3f_div_s(mat3f dest, mat3f src_a, float src_b);
+
+void glmc_mat3f_madd(mat3f dest, mat3f src_a, mat3f src_b);
+
+void glmc_mat3f_msub(mat3f dest, mat3f src_a, mat3f src_b);
+
+void glmc_mat3f_transpose(mat3f dest, mat3f src);
+void glmc_mat3f_transpose_dest(mat3f dest);
+
+
+void glmc_mat3f_normlize(mat3f dest, mat3f src);
+void glmc_mat3f_normlize_dest(mat3f dest);
+
+void glmc_mat3f_translation(mat3f dest, float src_a, float src_b);
+
+void glmc_mat3f_scale(mat3f dest, float x, float y);
+
+//mat4
+
+void glmc_mat4f_copy(mat4f dest, mat4f src);
+
+void glmc_mat4f_add(mat4f dest, mat4f src_a, mat4f src_b);
+void glmc_mat4f_add_dest(mat4f dest, mat4f src_b);
+
+void glmc_mat4f_sub(mat4f dest, mat4f src_a, mat4f src_b);
+void glmc_mat4f_sub_dest(mat4f dest, mat4f src_b);
+
+void glmc_mat4f_mul(mat4f dest, mat4f src_a, mat4f src_b);
+void glmc_mat4f_mul_dest(mat4f dest, mat4f src_b);
+void glmc_mat4f_mul_s(mat4f dest, mat4f src_a, float src_b);
+
+float glmc_mat4f_determinant(mat4f mat);
+void glmc_mat4f_inverse(mat4f dest, mat4f src);
+
+void glmc_mat4f_div(mat4f dest, mat4f src_a, mat4f src_b);
+void glmc_mat4f_div_dest(mat4f dest, mat4f src_b);
+void glmc_mat4f_div_s(mat4f dest, mat4f src_a, float src_b);
+
+void glmc_mat4f_madd(mat4f dest, mat4f src_a, mat4f src_b);
+
+void glmc_mat4f_msub(mat4f dest, mat4f src_a, mat4f src_b);
+
+void glmc_mat4f_transpose(mat4f dest, mat4f src);
+void glmc_mat4f_transpose_dest(mat4f dest);
+
+
+void glmc_mat4f_normlize(mat4f dest, mat4f src);
+void glmc_mat4f_normlize_dest(mat4f dest);
+
+void glmc_mat4f_translation(mat4f dest, float t1, float t2, float t3);
+
+void glmc_mat4f_rotation(mat4f dest, float ux, float uy, float uz, float theta);
+
+void glmc_mat4f_scale(mat4f dest, float src_a, float src_b, float src_c);
+
+void glmc_mat4f_ortho_projection(mat4f dest, float t, float b, float r, float l);
+
+void glmc_mat4f_perspective_projection(mat4f dest, float alpha, float aspect, float near, float far);
+
 
 #endif /* _GLMC_H */
